@@ -1,0 +1,4 @@
+{
+    "command": "./gradlew test",
+    "working_directory": "/home/kavia/workspace/code-generation/learning-app-demonstration-286764-286773/springboot_backend"
+}
