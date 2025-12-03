@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::title}, ~{::section})}">
+<head>
+    <title th:text="${pageTitle} + ' - ' + ${appName}">Courses - Learning App</title>
+</head>
+<body>
+<section>
+    <h1>Courses</h1>
+    <p class="muted">Sample catalog loaded into an in-memory database (H2).</p>
+
+    <div class="grid">
+        <div class="card" th:each="course : ${courses}">
+            <h3 th:text="${course.title}">Course Title</h3>
+            <p th:text="${course.description}">Course description</p>
+            <div class="meta">
+                <span class="chip" th:text="${course.level}">Level</span>
+                <span class="chip" th:text="${course.durationHours} + 'h'">0h</span>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::title}, ~{::section})}">
+<head>
+    <title th:text="${pageTitle} + ' - ' + ${appName}">About - Learning App</title>
+</head>
+<body>
+<section>
+    <h1>About</h1>
+    <p>This demo showcases a simple learning app built with Spring Boot, Thymeleaf, and H2.</p>
+    <ul>
+        <li>Modern, responsive UI with a clean design</li>
+        <li>API documentation via OpenAPI/Swagger</li>
+        <li>Sample data initialized at startup</li>
+    </ul>
+</section>
+</body>
+</html>
